@@ -5,10 +5,14 @@ body {
 }
 
 header {
+    position:sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    background-color: #fff;
+    z-index: 1;
 }
 
 .header__logo {
@@ -80,10 +84,25 @@ button:hover {
 .about__image {
     width: 500px;
 }
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
    
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
 }
 
 .form__container {
